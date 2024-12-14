@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #232323;">
+    <button id="orange">orange</button>
+    <button id="Yellow">Yellow</button>
+</body>
+    <script>
+
+
+        function myfunction1(){
+            let name = "javascript";
+            function inner(){
+                let name2 = "java";
+                console.log(name);
+            }
+
+            function inner2(){
+                let name3 = "python"
+                console.log(name2);
+            }
+            // inner();
+            // console.log(name)
+            // console.log(name2);
+        }
+        // myfunction1();
+        
+        function Close(){
+            let name = "javascript"
+            function inner(){
+                console.log(name);
+            }
+            return inner
+        }
+
+        // Close();  not execute
+
+        let myfunc = Close();
+        myfunc();
+    </script>
+    <script>
+        // document.getElementById('orange').onclick = function(){
+        //     document.body.style.backgroundColor = 'orange'
+        // }
+
+        // document.getElementById('Yellow').onclick = function(){
+        //     document.body.style.backgroundColor = 'Yellow'
+        // }
+
+        // function clickHandler(color){
+        //     document.body.style.backgroundColor = `${color}`;
+        // }
+
+        // document.getElementById('orange').onclick = clickHandler('orange');
+
+        // document.getElementById('Yellow').onclick = clickHandler('Yellow');
+
+        // it will run without clicking on button
+        // here we want a return function but it will directly execute
+        // now we hav to use return a function to excecute properly 
+
+        function clickHandler(color){
+            // document.body.style.backgroundColor = `${color}`;
+            return function(){
+                document.body.style.backgroundColor = `${color}`
+            }
+        }
+
+        document.getElementById('orange').onclick = clickHandler('orange');
+
+        document.getElementById('Yellow').onclick = clickHandler('Yellow');
+    </script>
+</html>

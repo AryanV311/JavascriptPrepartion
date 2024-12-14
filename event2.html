@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <h2>chai aur javacsript</h2>
+    <button id="start">start</button>
+    <button id="stop">stop</button>
+</body>
+<script>
+    let startChange = function(){
+        document.querySelector('h2').innerHTML= 'chai aur maje karo'
+    }
+
+    let changer;
+    document.getElementById('start').addEventListener('click',() => {
+         changer = setInterval(startChange, 2000);
+         console.log('start')
+    });
+
+    document.getElementById('stop').addEventListener("click",() => {
+        clearInterval(changer)
+        console.log('stopped')
+    })
+
+</script>
+</html>

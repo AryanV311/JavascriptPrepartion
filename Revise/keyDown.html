@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table, th, td {
+          border:1px solid black;
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .insert{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        </style>
+
+</head>
+<body >
+    <div class="container">
+        <div class="insert">
+        <table>
+            <tr>
+              <th>Company</th>
+              <th>Contact</th>
+              <th>Country</th>
+            </tr>
+            <tr>
+              <td>Alfreds Futterkiste</td>
+              <td>Maria Anders</td>
+              <td>Germany</td>
+            </tr>
+        </table>
+    </div>
+    </div>
+</body>
+
+    <script>
+        const insert = document.querySelector('.insert')
+
+        window.addEventListener('keydown', (e) => {
+            insert.innerHTML = `<table>
+                <tr>
+                  <th>key</th>
+                  <th>Keycode</th>
+                  <th>code</th>
+                </tr>
+                <tr>
+                  <td>${e.key === " " ? "space": e.key}</td>
+                  <td>${e.keyCode}</td>
+                  <td>${e.code}</td>
+                </tr>
+            </table>`
+        })
+
+        
+    </script>
+</html>

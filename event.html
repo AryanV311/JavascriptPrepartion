@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+     
+    <ul class="language">
+        <li>javascript</li>
+    </ul>
+
+</body>
+<script>
+    // function addLanguage(langname){
+    //     const li = document.createElement('li')
+    //     li.innerHTML=`${langname}`
+    //     document.querySelector('.language').appendChild(li)
+    // }
+    // addLanguage('typescript')
+    // addLanguage('python')
+
+    // optimization way
+
+    function addOplanguage(langName){
+        const li = document.createElement('li')
+        const addText = document.createTextNode(langName)
+        li.appendChild(addText)
+        document.querySelector('.language').appendChild(li)
+    }
+
+    addOplanguage('Mongodb')
+    addOplanguage('Nodejs')
+    addOplanguage('reactJs')
+
+    //Edit and Rremove
+
+    const secondLang = document.querySelector("li:nth-child(2)")
+    // secondLang.innerHTML='java'
+
+// we can repalce with new li
+    const newLi = document.createElement('li')
+    newLi.textContent='javascript'
+    secondLang.replaceWith(newLi)
+
+    const lastLang = document.querySelector("li:last-child")
+    // lastLang.remove()
+
+</script>
+</html>
