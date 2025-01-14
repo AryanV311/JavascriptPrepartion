@@ -18,27 +18,27 @@
         </ul>
 </body>
 <script>
-    //document.querySelector('#images').addEventListener('click', () => {
-    //    console.log('click inside ul');
-    //})
+    document.querySelector('#images').addEventListener('click', () => {
+       console.log('click inside ul');
+    })
 
-    //document.querySelector('#river').addEventListener('click', (e) => {
-      //  e.stopPropagation()
-        //console.log('click inside il');
-    //}) 
+    document.querySelector('#river').addEventListener('click', (e) => {
+       e.stopPropagation()
+        console.log('click inside il');
+    }) 
 
     document.querySelector('#google').addEventListener('click', (e) => {
         e.preventDefault()
     })
 
     
-    document.querySelector('#images').addEventListener('click', (e) => {
-        console.log(e.target.tagName);
-        if(e.target.tagName == 'IMG'){
-            let removiIt = e.target.parentNode
-            removiIt.remove()
-        }
-    })
+    // document.querySelector('#images').addEventListener('click', (e) => {
+    //     console.log(e.target.tagName);
+    //     if(e.target.tagName == 'IMG'){
+    //         let removiIt = e.target.parentNode
+    //         removiIt.remove()
+    //     }
+    // })
 
 
 </script>
