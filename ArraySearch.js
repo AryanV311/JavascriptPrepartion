@@ -34,5 +34,14 @@ for(let i = points.length - 1; i > 0; i--){
     points[j] = k
 }
 
-console.log(points)
+// console.log(points)
 
+const names = ["arya","aryan","mangesh","shailesh"]
+
+let compare = (a, b) => {
+    return a- b
+}
+
+names.sort(compare)
+
+console.log(names);
