@@ -44,4 +44,7 @@ let compare = (a, b) => {
 
 names.sort(compare)
 
-console.log(names);
+// console.log(names);
+
+let num = [1] + [2,3]
+console.log(num);
