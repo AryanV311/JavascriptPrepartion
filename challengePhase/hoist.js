@@ -1,6 +1,6 @@
 //? myfun()
 
-//! we cannot access experssuon function before an intialization
+//! we cannot access experssion function before an intialization
 // let myfun = function(){
 //     console.log('first')
 // }
