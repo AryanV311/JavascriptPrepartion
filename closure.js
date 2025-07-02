@@ -11,3 +11,25 @@
 // }
 
 // myfunction1()
+
+
+function secretHolder(){
+  let secret = 'Aryan treasure map'
+  
+  return {
+    getSecret(){
+      return secret;
+    },
+    
+    setSecret(newSecret){
+      secret = newSecret;
+    }
+  }
+}
+
+const mySecret = secretHolder()
+console.log(mySecret.getSecret())
+
+mySecret.setSecret('New Map Found')
+
+console.log(mySecret.getSecret())
