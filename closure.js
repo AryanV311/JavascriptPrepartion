@@ -33,3 +33,21 @@ console.log(mySecret.getSecret())
 mySecret.setSecret('New Map Found')
 
 console.log(mySecret.getSecret())
+
+
+for (var i = 1; i <= 3; i++) {
+  setTimeout(function() {
+    console.log(i); // ??
+  }, i * 1000);
+}
+// 4, 4, 4
+
+// closure use to solve scope prbolem
+for(var i=1; i<=3; i++){
+  (function(j){
+    setTimeout(function() {
+    console.log(j)
+  }, j *1000);
+  })(i)
+}
+//1, 2, 3
