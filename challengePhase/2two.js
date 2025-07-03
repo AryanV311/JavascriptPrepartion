@@ -44,6 +44,7 @@ const arr = [2,3,6,1,9,5]
 
 console.log(maxNumber(arr))
 console.log(Math.max(...arr))
+console.log(Math.max.apply(null,arr))
 
 function isPalindrome(str){
   let palindrome = str.split("").reverse().join("")
