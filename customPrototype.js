@@ -41,3 +41,29 @@ console.log(even)
 
 const allSum = arr.myReduce((acc, val) => acc + val)
 console.log(allSum)
+
+
+
+Function.prototype.myCall = function(context = globalThis, ...args){
+  if(typeof this !== 'function'){
+    throw new Error(this + " It's not a callable")
+  }
+  
+  console.log("context",context)
+  console.log("args", ...args)
+  
+  const uniqueKey = Symbol();
+  console.log(uniqueKey);
+
+  context[uniqueKey] = this;
+  console.log("unique",context[uniqueKey]);
+
+  const result = context[uniqueKey](...args);
+  console.log(result);
+
+  delete context[uniqueKey];
+  return result;
+}
+
+const call = getInfo.myCall(user, 'hello')
+console.log(call)
