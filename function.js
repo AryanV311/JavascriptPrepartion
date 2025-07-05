@@ -34,3 +34,24 @@ function calculatePrice(numm1,...num2){
 // console.log(calculatePrice(23,34,24))
 // console.log(calculatePrice(23,34,45,56))
 
+
+
+//* this is a Block, not a Block scope -> it means what all variables and function we can acces in block:{} 
+// {
+//     var a =10;
+//     let b=20;
+//     const c = 20;
+// }
+
+//* let & const (TBZ)-> Temporal Dead Zone
+
+//* TBZ -> since its let and const variable is hoisted and till it is initialize some value that between in that called Temporal Dead Zone
+//* -> let & const is also Hoisted, becuase of temporal dead zone we can access before initializations
+//* -> let & const are maintain in different storage, they are block scope
+
+console.log(a); //! -> error will be cannot access before initialization it means it hoisted
+console.log(x); //! -> error will be x is not defined, 
+
+let a =10;
+
+var b= 20;
